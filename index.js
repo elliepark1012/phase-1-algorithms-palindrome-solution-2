@@ -1,10 +1,24 @@
+const { interfaces } = require("mocha");
+
 function isPalindrome(word) {
   // Write your algorithm here
+  const myArray = word.split("");
+  for(let i = 0; i < myArray.length / 2; i ++) {
+    const j = myArray.length - 1 - i ;
+    if(myArray[i] !== myArray[j]){
+    return false};
+  }
+    return true 
 }
 
 /* 
   Add your pseudocode here
-*/
+  make string into an array 
+  iterate through half of the array
+  first=last second = second to the last --- till the middle 
+  same ? return true 
+  not? return false  
+*/ 
 
 /*
   Add written explanation of your solution here
